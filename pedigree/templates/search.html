@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container pt-5">
+        <div class="jumbotron">
+            <form method="POST" action="{% url 'results' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <h1 class="h1">Search for a pedigree</h1>
+                    <input type="text" name="search" class="form-control" id="search" aria-describedby="searchHelp"
+                           placeholder="Enter Goat ID">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <h4>Breeders</h4>
+        <input class="form-control" id="breedersInput" type="text" placeholder="Search..">
+        <br>
+        <ul class="list-group list-group-flush" id="breedersList">
+            {% for breeder in breeders.all %}
+                <button type="button" class="list-group-item list-group-item-action"
+                        onclick="javascript:{document.getElementById('{{ breeder.id }}').submit()}">{{ breeder.prefix }}</button>
+                <form id="{{ breeder.id }}" method="POST" action="{% url 'breeder' breeder.prefix %}">
+                    {% csrf_token %}
+                    <input type="hidden">
+                </form>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#breedersInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#breedersList button").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

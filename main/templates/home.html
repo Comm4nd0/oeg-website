@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main role="main">
+    {#banner#}
+    <div id="myCarousel" class="carousel slide pb-2" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for banner in banners.all %}
+                <li data-target="#myCarousel" data-slide-to="{{ banner.id }}" class="active"></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for banner in banners.all %}
+                <div class="carousel-item {% if banner.id == 1 %}active{% endif %}">
+                    <img class="first-slide img-fluid" src="{{ banner.image.url }}">
+                    <div class="container ">
+                        <div class="carousel-caption text-left">
+                            <div class="transbox w-50 p-3">
+                                <h1>{% if banner.title %}{{ banner.title }}{% endif %}</h1>
+                                <p>{% if banner.text %}{{ banner.text }}{% endif %}</p>
+                            </div>
+                            {% if banner.url %}<p><a class="btn btn-lg btn-primary" href="{{ banner.url }}" role="button">Find out
+                                more</a>{% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Old English Goat Society</h1>
+                <p class="lead">What is an Old English Goat?</p>
+            </div>
+            <div class="col-lg-8 ">
+                <p>The old English Goat is a small cobby, thrifty goat, suitable for providing a household with a
+                    regular milk supply and the odd kid for the freezer. It is generally hardy and noted for its
+                    long
+                    lactation, typically 'running through' up to 18 months and being kidded for milk every other
+                    year.
+                    <br>
+                    <br>
+                    These goats have big bellies with a digestive system for dealing with bulky foods, so that
+                    compared
+                    with the large dairy breeds they need little concentrate ration to maintain condition and milk
+                    yield.
+                    <br>
+                    <br>
+                    Horns are usually left on these small goats, which may be various shades of brown and grey, with
+                    dark legs and with or without white patches. The outer coat is thick and has a cashmere
+                    undercoat
+                    (especially obvious in winter) and the nanny goats have a beard and, usually, ‘trousers’ and
+                    other
+                    hairy trimmings. Toggles on the neck, and Swiss-style markings are not accepted. Talisman Myrtle
+                    (below), is a modern example; compare her with Emerald (see Breed History section) an admired
+                    nanny
+                    from the 1920s, and you can see the type has been preserved well so far.
+                    Talisman Myrtle, a typical Old English Goat.</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="/media/goat1.jpeg" class="rounded img-thumbnail" alt="what a goat">
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid marketing bg-light">
+
+        <div class="row pt-2">
+            <div class="col-lg-3">
+                <i class="fas fa-award" style="font-size:6em;color:darkseagreen;"></i>
+                <h2>Pedigree</h2>
+                <p>Search our database of Old English Goats and find discover the pedigree.</p>
+                <p><a class="btn btn-secondary" href="{% url 'pedigree' %}" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <i class="fas fa-gavel" style="font-size:6em;color:darkseagreen;"></i>
+                <h2>Standards</h2>
+                <p>It's important to know all the standards, read about them here.</p>
+                <p><a class="btn btn-secondary" href="{% url 'standards' %}" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <i class="far fa-newspaper" style="font-size:6em;color:darkseagreen;"></i>
+                <h2>News</h2>
+                <p>What's new? Find out more here!</p>
+                <p><a class="btn btn-secondary" href="{% url 'news' %}" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <i class="far fa-images" style="font-size:6em;color:darkseagreen;"></i>
+                <h2>Gallery</h2>
+                <p>View our images of goats.</p>
+                <p><a class="btn btn-secondary" href="{% url 'gallery' %}" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+    </div>
+    <div class="container pb-4">
+        <div class="col-md-6">
+            <div class="row">
+                <h3><span>Links</span></h3>
+            </div>
+            <div class="col-md-6">
+                <a href="http://www.egba.org.uk/" target="_blank"><img
+                        src="/media/links/englishgoatbreedersassociation.jpg"
+                        alt="english goat breeders association" class="img-thumbnail"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

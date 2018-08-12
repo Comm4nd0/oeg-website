@@ -8,4 +8,3 @@ db.sqlite3
 db.sqlite.bak
 LightsailDefaultPrivateKey-eu-west-2.pem
 venv
-media/

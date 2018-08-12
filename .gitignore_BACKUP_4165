@@ -8,4 +8,7 @@ db.sqlite3
 db.sqlite.bak
 LightsailDefaultPrivateKey-eu-west-2.pem
 venv
+<<<<<<< HEAD
+=======
 media/
+>>>>>>> 10bb641902109593a0918d0566b443fa9e7d6553

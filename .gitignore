@@ -1,0 +1,11 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+oeg/local_settings.py
+db.sqlite3
+db.sqlite.bak
+LightsailDefaultPrivateKey-eu-west-2.pem
+venv
+media/

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container pt-5">
+        {% for article in news_articles.all %}
+            <div class="row featurette pb-2">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">{{ article.title }} <span class="text-muted"><small>{{ article.date|date:"d M y" }}</small></span>
+                    </h2>
+                    <p class="lead">{{ article.body }}</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    {% if article.image %}<img class="featurette-image img-fluid mx-auto pb-2" src="{{ article.image.url }}"
+                                            alt="Generic placeholder image">{% endif %}
+                    {% if article.attachment %}<a href="{{ article.attachment.url }}"><button type="button" class="btn btn-secondary">{{ article.attachment }}</button></a>{% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

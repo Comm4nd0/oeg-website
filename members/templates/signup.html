@@ -11,7 +11,7 @@
         <br/>
 
         <h1>Signup</h1>
-
+        <p>Fill in the information below to create an account.</p>
         <form class="" action="{% url 'signup' %}" method="POST">
             {% csrf_token %}
             <div class="form-row">
@@ -25,6 +25,8 @@
                     <input class="form-control" type="password" placeholder="Password again" name="password2"/>
                 </div>
             </div>
+            <br>
+            <small>Please be aware that all accounts are disabled by default until after we review your account.</small>
             <br/>
             <input class="btn btn-primary" type="submit" value="Sign Up!">
         </form>

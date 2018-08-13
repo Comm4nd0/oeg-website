@@ -11,7 +11,13 @@
                     <input type="text" name="search" class="form-control" id="search" aria-describedby="searchHelp"
                            placeholder="Enter Goat ID">
                     <br>
+                    {% if error %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ error }}<strong>{{ reg_no }}</strong>.
+                        </div>
+                    {% endif %}
                     <button type="submit" class="btn btn-primary">Search</button>
+
                 </div>
             </form>
         </div>

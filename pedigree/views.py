@@ -27,7 +27,11 @@ def results(request, reg_no):
     try:
         lvl1 = Goat.objects.get(reg_no__exact=reg_no.upper())
     except:
-        return HttpResponse('error!!')
+        breeders = Breeder.objects
+        error = "no goats found using: "
+        return render(request, 'search.html', {'breeders': breeders,
+                                               'error': error,
+                                               'reg_no': reg_no})
 
     data = {}
 

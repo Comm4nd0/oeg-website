@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8215a4f5-59c4-44f8-9c38-8fbe2c1af8b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pedigree/templates/breeder.html" beforeDir="false" afterPath="$PROJECT_DIR$/pedigree/templates/breeder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedigree/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/pedigree/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedigree/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pedigree/views.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,93 +33,51 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="12" />
-          <entry key="py" value="37" />
+          <entry key="html" value="13" />
+          <entry key="py" value="38" />
           <entry key="swp" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="12" />
+          <entry key="HTML" value="13" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="37" />
+          <entry key="Python" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="910" />
-          <entry key="py" value="2064" />
+          <entry key="html" value="1062" />
+          <entry key="py" value="2236" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="910" />
-          <entry key="Python" value="2064" />
+          <entry key="HTML" value="1062" />
+          <entry key="Python" value="2236" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/members/templates/signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pedigree/templates/breeder.html">
+        <entry file="file://$PROJECT_DIR$/pedigree/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/members/templates/post_signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/members/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="360">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/members/urls.py">
+        <entry file="file://$PROJECT_DIR$/pedigree/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -149,7 +108,6 @@
         <option value="$PROJECT_DIR$/oeg/templates/base.html" />
         <option value="$PROJECT_DIR$/oeg/settings.py" />
         <option value="$PROJECT_DIR$/pedigree/admin.py" />
-        <option value="$PROJECT_DIR$/pedigree/views.py" />
         <option value="$PROJECT_DIR$/pedigree/urls.py" />
         <option value="$PROJECT_DIR$/import.py" />
         <option value="$PROJECT_DIR$/pedigree/models.py" />
@@ -167,6 +125,8 @@
         <option value="$PROJECT_DIR$/members/views.py" />
         <option value="$PROJECT_DIR$/members/templates/signup.html" />
         <option value="$PROJECT_DIR$/pedigree/templates/breeder.html" />
+        <option value="$PROJECT_DIR$/pedigree/templates/search.html" />
+        <option value="$PROJECT_DIR$/pedigree/views.py" />
       </list>
     </option>
   </component>
@@ -339,13 +299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pedigree/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pedigree/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -414,16 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pedigree/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -467,16 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/news/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -511,13 +444,17 @@
     <entry file="file://$PROJECT_DIR$/members/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/members/urls.py">
+    <entry file="file://$PROJECT_DIR$/members/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pedigree/templates/breeder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -538,17 +475,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/members/templates/signup.html">
+    <entry file="file://$PROJECT_DIR$/members/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pedigree/templates/breeder.html">
+    <entry file="file://$PROJECT_DIR$/news/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pedigree/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pedigree/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

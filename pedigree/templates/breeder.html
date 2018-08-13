@@ -17,7 +17,7 @@
             <dt class="col-sm-3">email</dt>
             <dd class="col-sm-9"><a href="mailto:{{ breeder_details.email }}">{{ breeder_details.email }}</a></dd>
         </dl>
-        <h4>Currently owned pedigrees</h4>
+        <h4>Goats currently owned by {{ breeder_details }}</h4>
         <input class="form-control" id="ownerInput" type="text" placeholder="Search..">
         <table class="table table-sm table-hover">
             <thead>
@@ -49,7 +49,7 @@
             </tbody>
         </table>
         <hr>
-        <h4>Pedigrees bred by {{ breeder_details }}</h4>
+        <h4>Goats bred by {{ breeder_details }}</h4>
         <input class="form-control" id="bredInput" type="text" placeholder="Search..">
         <table class="table table-sm table-hover">
             <thead>

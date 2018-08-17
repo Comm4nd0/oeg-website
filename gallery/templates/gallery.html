@@ -33,7 +33,7 @@
                     {% for image in gallery.all %}
                         <div class="column">
                             <img class="demo cursor" src="{{ image.image.url }}" style="width:100%"
-                                 onclick="currentSlide({{ image.id }})"
+                                 onclick="currentSlide({{ forloop.counter }})"
                                  alt="{{ image.title }}">
                         </div>
                     {% endfor %}

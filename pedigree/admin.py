@@ -30,15 +30,16 @@ class BreederAdmin(admin.ModelAdmin):
     list_display = ('prefix', 'contact_name', 'address', 'phone_number1', 'phone_number2', 'email')
     list_display_links = ('prefix', 'contact_name', 'address', 'phone_number1', 'phone_number2', 'email')
     search_fields = ('prefix', 'contact_name', 'address', 'phone_number1', 'phone_number2', 'email')
+    list_filter = ('active', 'prefix')
     ordering = ['prefix']
     empty_value_display = '-empty-'
 
     fieldsets = (
-        (None, {
-            'fields': ('prefix', 'contact_name')
+        ('Breeder details', {
+            'fields': ('prefix', 'active')
         }),
         ('Contact options', {
-            'fields': ('address', 'phone_number1', 'phone_number2', 'email'),
+            'fields': ('contact_name', 'address', 'phone_number1', 'phone_number2', 'email'),
         }),
     )
     save_on_top = True

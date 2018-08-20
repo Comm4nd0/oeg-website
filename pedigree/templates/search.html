@@ -27,14 +27,12 @@
         <br>
         <ul class="list-group list-group-flush" id="breedersList">
             {% for breeder in breeders.all %}
-                {% if breeder.active %}
                 <button type="button" class="list-group-item list-group-item-action"
                         onclick="javascript:{document.getElementById('{{ breeder.id }}').submit()}">{{ breeder.prefix }}</button>
                 <form id="{{ breeder.id }}" method="POST" action="{% url 'breeder' breeder.prefix %}">
                     {% csrf_token %}
                     <input type="hidden">
                 </form>
-                {% endif %}
             {% endfor %}
         </ul>
     </div>

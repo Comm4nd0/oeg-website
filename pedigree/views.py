@@ -99,6 +99,12 @@ def breeder(request, breeder):
 
 
 @login_required(login_url="/members/signup")
+def breeders(request):
+    breeders = Breeder.objects
+    return render(request, 'breeders.html', {'breeders': breeders})
+
+
+@login_required(login_url="/members/signup")
 def goat_csv(request):
     # Create the HttpResponse object with the appropriate CSV header.
     response = HttpResponse(content_type='text/csv')

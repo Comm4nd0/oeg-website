@@ -11,9 +11,15 @@
                     <p class="lead">{{ article.body }}</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    {% if article.image %}<img class="featurette-image img-fluid mx-auto pb-2" src="{{ article.image.url }}"
-                                            alt="Generic placeholder image">{% endif %}
-                    {% if article.attachment %}<a href="{{ article.attachment.url }}"><button type="button" class="btn btn-secondary">{{ article.attachment }}</button></a>{% endif %}
+                    {% if article.image %}
+                        <img class="featurette-image img-fluid mx-auto pb-2" src="{{ article.image.url }}"
+                             alt="Generic placeholder image">
+                    {% else %}
+                        <i class="far fa-newspaper fa-9x"></i>
+                    {% endif %}
+                    {% if article.attachment %}<a href="{{ article.attachment.url }}">
+                        <button type="button" class="btn btn-secondary">{{ article.attachment }}</button>
+                    </a>{% endif %}
                 </div>
             </div>
 

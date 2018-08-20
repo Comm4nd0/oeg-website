@@ -224,3 +224,8 @@ img {
 .demo:hover {
     opacity: 1;
 }
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 100%;
+}

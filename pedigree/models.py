@@ -23,6 +23,7 @@ class Goat(models.Model):
     current_owner = models.ForeignKey(Breeder, on_delete=models.PROTECT, blank=True, null=True, related_name='+')
     reg_no = models.CharField(max_length=100, blank=True)
     name = models.CharField(max_length=100, blank=True)
+    date_of_registration = models.DateField(blank=True)
     dob = models.CharField(max_length=100, blank=True)
     dod = models.CharField(max_length=100, blank=True)
 

@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from .models import Goat, Breeder
+from django.db.models import Q
 import csv
 
 
@@ -11,27 +13,38 @@ def search(request):
 
 
 def search_res(request):
-    return results(request, reg_no=None)
+    return results(request, search_string=None)
 
 
-def view_from_admin(request, reg_no):
-    return results(request, reg_no)
+def view_from_admin(request, search_string):
+    return results(request, search_string)
 
 
 @login_required(login_url="/members/signup")
-def results(request, reg_no):
+def results(request, search_string):
     if request.POST:
-        reg_no = request.POST['search']
+        search_string = request.POST['search']
 
     # lvl 1
     try:
-        lvl1 = Goat.objects.get(reg_no__exact=reg_no.upper())
-    except:
+        lvl1 = Goat.objects.get(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string) | Q(breeder__prefix=search_string))
+    except ObjectDoesNotExist:
         breeders = Breeder.objects
         error = "no goats found using: "
         return render(request, 'search.html', {'breeders': breeders,
                                                'error': error,
-                                               'reg_no': reg_no})
+                                               'search_string': search_string})
+
+    # count = 0
+    # for res in lvl1:
+    #     count += 1
+
+    if count > 1:
+        breeders = Breeder.objects
+        error = "More than 1 goat found!: "
+        return render(request, 'search.html', {'breeders': breeders,
+                                               'error': error,
+                                               'search_string': search_string})
 
     data = {}
 

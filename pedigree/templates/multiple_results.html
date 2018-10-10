@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+        <div class="pt-1">
+            <form method="POST" action="{% url 'results' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-auto">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="search" class="form-control" id="search"
+                                   aria-describedby="searchHelp"
+                                   placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     <div class="container pt-5">
+
+
         <h2 class="featurette-heading">Search Results: {{ search_string }}</h2>
 
         <input class="form-control" id="goatInput" type="text" placeholder="Filter..">

@@ -42,8 +42,15 @@ def results(request, search_string):
     if count > 1:
         return render(request, 'multiple_results.html', {'results': lvl1,
                                                          'search_string': search_string})
-
-    lvl1 = Goat.objects.get(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string))
+    
+    try:
+        lvl1 = Goat.objects.get(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string))
+    except ObjectDoesNotExist:
+        breeders = Breeder.objects
+        error = "no goats found using: "
+        return render(request, 'search.html', {'breeders': breeders,
+                                               'error': error,
+                                               'search_string': search_string})
 
     data = {}
 

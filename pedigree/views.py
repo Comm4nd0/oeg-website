@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.contrib.auth.decorators import login_required
 from .models import Goat, Breeder
 from django.db.models import Q
@@ -27,7 +27,7 @@ def results(request, search_string):
 
     # lvl 1
     try:
-        lvl1 = Goat.objects.get(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string) | Q(breeder__prefix=search_string))
+        lvl1 = Goat.objects.filter(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string))
     except ObjectDoesNotExist:
         breeders = Breeder.objects
         error = "no goats found using: "
@@ -35,16 +35,15 @@ def results(request, search_string):
                                                'error': error,
                                                'search_string': search_string})
 
-    # count = 0
-    # for res in lvl1:
-    #     count += 1
+    count = 0
+    for res in lvl1.all():
+        count += 1
 
     if count > 1:
-        breeders = Breeder.objects
-        error = "More than 1 goat found!: "
-        return render(request, 'search.html', {'breeders': breeders,
-                                               'error': error,
-                                               'search_string': search_string})
+        return render(request, 'multiple_results.html', {'results': lvl1,
+                                                         'search_string': search_string})
+
+    lvl1 = Goat.objects.get(Q(reg_no__icontains=search_string.upper()) | Q(name__icontains=search_string))
 
     data = {}
 

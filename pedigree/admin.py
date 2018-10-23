@@ -21,9 +21,6 @@ class GoatAdmin(admin.ModelAdmin):
               ('first_prize', 'second_prize', 'third_prize'))
     save_on_top = True
 
-    def view_on_site(self, Goat):
-        url = reverse('preview', kwargs={'reg_no': Goat.reg_no})
-        return 'http://35.178.2.225' + url
 
 
 class BreederAdmin(admin.ModelAdmin):
@@ -44,9 +41,6 @@ class BreederAdmin(admin.ModelAdmin):
     )
     save_on_top = True
 
-    def view_on_site(self, Breeder):
-        url = reverse('breeder', kwargs={'breeder': Breeder.prefix})
-        return 'http://35.178.2.225' + url
 
 admin.site.register(Goat, GoatAdmin)
 

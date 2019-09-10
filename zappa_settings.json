@@ -1,0 +1,17 @@
+{
+    "oeg": {
+        "aws_region": "eu-west-2",
+        "django_settings": "oeg.settings",
+        "profile_name": null,
+        "project_name": "oeg-website",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-10nxjua9p",
+        "apigateway_description": "OEG: live",
+            "vpc_config" : {
+            "SubnetIds": [ "subnet-0324e9fb3798dbab2","subnet-07aece9a7de588b66", "subnet-085ec18d901ff1fad" ], // use the private subnet
+            "SecurityGroupIds": [ "sg-0c95ad82d6837ec45" ]
+        }
+        #"certificate_arn": "arn:aws:acm:us-east-1:456152681251:certificate/6ddbaf53-b78e-4a39-83ba-187e30693fc9",
+        #"domain": "dev.cloud-lines.com"
+    }
+}

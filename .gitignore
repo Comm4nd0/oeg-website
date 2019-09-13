@@ -9,3 +9,4 @@ db.sqlite.bak
 LightsailDefaultPrivateKey-eu-west-2.pem
 venv
 media/
+zappa_settings.json

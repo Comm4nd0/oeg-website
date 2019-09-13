@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     'pedigree',
     'news',
     'gallery',
+    'storages',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',

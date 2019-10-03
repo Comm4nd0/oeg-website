@@ -4,17 +4,6 @@
     <div class="container">
         <div class="pt-4">
             {% for image in gallery.all %}
-                {#                <div class="col-md-4">#}
-                {#                    <div class="card mb-4 shadow-sm">#}
-                {#                        <img class="card-img-top" src="{{ image.image.url }}" alt="{{ image.title }}" style="width:100%;max-width:400px">#}
-                {#                        <div class="card-body">#}
-                {#                            <h4>{{ image.title }}</h4>#}
-                {#                            <p class="card-text">{{ image.body }}</p>#}
-                {#                        </div>#}
-                {##}
-                {#                    </div>#}
-                {#                </div>#}
-
                 <div class="mySlides">
                     <div class="numbertext">{{ image.title }}</div>
                     <img class="rounded mx-auto d-block" src="{{ image.image.url }}" style="max-width:100%">
